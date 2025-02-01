@@ -1,0 +1,127 @@
+/* Define Light and Dark Mode Colors using CSS Variables */
+:root {
+    /* Light Mode Colors */
+    --background-color-light: #f8f8f8;
+    --border-color-light: #ccc;
+    --text-color-light: #333;
+    --button-color-light: #007bff;
+    --button-hover-light: #0056b3;
+    --form-background-light: #ffffff;
+
+    /* Dark Mode Colors */
+    --background-color-dark: #333;
+    --border-color-dark: #555;
+    --text-color-dark: #f8f8f8;
+    --button-color-dark: #1a73e8;
+    --button-hover-dark: #4a8bf2;
+    --form-background-dark: #444;
+}
+
+/* Main Form Container */
+.formtable {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+    width: 90%; /* Adjust width to cover 90% of the page */
+    max-width: 600px; /* Ensure the form doesn't grow too large */
+    margin: 20px auto; /* Center the form */
+    border: 1px solid var(--border-color-light); /* Light mode border color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: var(--form-background-light); /* Light mode background */
+    color: var(--text-color-light); /* Light mode text color */
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .formtable {
+    border: 1px solid var(--border-color-dark); /* Dark mode border */
+    background-color: var(--form-background-dark); /* Dark mode background */
+    color: var(--text-color-dark); /* Dark mode text color */
+}
+
+/* Form Element Spacing */
+.formtable div {
+    margin-bottom: 15px; /* Spacing between form elements */
+}
+
+/* Label Styling */
+.formtable label {
+    display: block; /* Make labels stack on top of inputs */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input Fields and Textarea Styling */
+.formtable input[type="text"],
+.formtable input[type="number"],
+.formtable select,
+.formtable textarea {
+    width: 100%; /* Make inputs occupy the full width */
+    padding: 8px;
+    border: 1px solid var(--border-color-light); /* Light mode border */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 16px;
+}
+
+/* Dark Mode Input Fields */
+body.dark-mode .formtable input[type="text"],
+body.dark-mode .formtable input[type="number"],
+body.dark-mode .formtable select,
+body.dark-mode .formtable textarea {
+    border: 1px solid var(--border-color-dark); /* Dark mode border */
+    background-color: #666; /* Dark background for inputs */
+    color: var(--text-color-dark); /* Dark text color */
+}
+
+/* Textarea Height and Resizing */
+.formtable textarea {
+    height: 120px; /* Adjust height for description */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Submit Button Styling */
+.formtable button[type="submit"] {
+    background-color: var(--button-color-light); /* Light mode button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .formtable button[type="submit"] {
+    background-color: var(--button-color-dark); /* Dark mode button */
+}
+
+/* Button Hover Effects */
+.formtable button[type="submit"]:hover {
+    background-color: var(--button-hover-light); /* Light mode hover */
+}
+
+/* Dark Mode Button Hover */
+body.dark-mode .formtable button[type="submit"]:hover {
+    background-color: var(--button-hover-dark); /* Dark mode hover */
+}
+
+/* Heading Styling */
+.formtable h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color-light); /* Light mode heading color */
+}
+
+/* Dark Mode Heading */
+body.dark-mode .formtable h2 {
+    color: var(--text-color-dark); /* Dark mode heading color */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+    .formtable {
+        width: 90%; /* Full width on smaller screens */
+    }
+}

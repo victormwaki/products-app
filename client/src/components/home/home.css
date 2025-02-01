@@ -1,0 +1,61 @@
+/* Base styles for the home container */
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-photo/top-view-dessert-cheesecake-with-decorated-apple-slices_141793-4296.jpg?t=st=1738398661~exp=1738402261~hmac=1af2e8a66ddb8838a11a3b6cb8da99dfcd0b3dbbb8b2dca8394f086c383b273d&w=1380'); /* Replace with the actual image URL */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overlay style for the welcome message */
+.welcome-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Slight dark overlay for better text visibility */
+    color:rgb(13, 66, 66);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Style for feature section, if needed */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-item {
+    width: 30%;
+    text-align: center;
+}
+
+.feature-item h2 {
+    font-size: 1.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
