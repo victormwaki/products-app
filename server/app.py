@@ -3,7 +3,6 @@ from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_restful import Api
 from werkzeug.security import generate_password_hash, check_password_hash
-import jwt
 import datetime
 from functools import wraps
 
@@ -95,6 +94,7 @@ def get_categories():
     return jsonify({
         'categories': [{'id': category.id, 'name': category.name} for category in categories]
     })
+
 
 @app.route('/products', methods=['POST'])
 def create_product():

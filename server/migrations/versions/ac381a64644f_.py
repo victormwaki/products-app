@@ -1,8 +1,8 @@
-"""adds cart
+"""empty message
 
-Revision ID: 28663933fb8c
+Revision ID: ac381a64644f
 Revises: 
-Create Date: 2025-02-01 14:56:41.664460
+Create Date: 2025-02-02 17:49:57.390458
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '28663933fb8c'
+revision = 'ac381a64644f'
 down_revision = None
 branch_labels = None
 depends_on = None
